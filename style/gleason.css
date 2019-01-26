@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+body  {
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 100%;
+
+}
+/* text styles */
+p	{
+	font-size: .8em ;
+	}
+h3	{ 
+	font-size: .9em;
+	font-style: bold;
+	}
+	
+a	{
+	text-decoration: none;
+	color: #3C3292;
+	}
+	
+img	{  
+	border-style: none;
+	}	
+.greenText {
+	color: #556643;
+}
+.rustText {
+	
+	color: #D15D2F;
+}
+.blueText {
+	color: #3C3292;
+}
+
+.redText {
+	color: #A61317;
+}
+.orangeText {
+	color: #F6921E;	
+}
+
+.aquaText {
+	color: #007092;	
+}
+
+.purpleText {
+	color: #815178;	
+}
+
+.pinkText {
+	color: #D3135A;	
+}
+
+#container {
+	width: 1024px;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	/*border: 1px solid #000000;*/
+	text-align: left; /* this overrides the text-align: center on the body element. */
+	font-size: .9em;
+	
+} 
+.header {/*css for all hearders*/
+	padding: 0;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	background-repeat: no-repeat;
+	height: 119px
+	
+} 
+#headerMenu	{
+	color: #fff;
+	float: right;
+	margin: 20px;
+	font-size: 0.7em;
+	}
+
+#headerMenu	a{
+	text-decoration: none;
+	color: #fff;
+	
+	}
+#headerMenu	a:hover{
+	
+	color: #DDE9DE;
+	
+	}
+
+/* Different background images for each page*/
+/* Make hearder images 1024 X 118  */
+
+#homeHeader	{	
+	background-image: url(../images/headers/homeHeader.jpg);	
+	}
+
+#aboutHeader	{
+	background-image: url(../images/headers/aboutHeader.png);
+	}
+
+#findHeader	{
+	background-image: url(../images/headers/findHeader.png);
+	}
+
+#childHeader	{
+	background-image: url(../images/headers/childHeader.png);
+	}
+
+#teenHeader	{
+	background-image: url(../images/headers/teenHeader.png);
+	}	
+#eventsHeader	{
+	background-image: url(../images/headers/eventHeader.png);
+	}
+#getInHeader	{
+	background-image: url(../images/headers/getInHeader.png);
+	}		
+#servicesHeader	{
+	background-image: url(../images/headers/servicesHeader.png);
+	}		
+#header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	/*padding: 10px 0;*/ /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+
+/*  Menu Styles located on separate style sheet "SpryMenuBarHorizontal.css */
+
+/* Content Area Start here - Organized into 3 columns Left, MainContent and Right  */
+
+#contentArea { /* creates white space at top of content area but allows find a book to be pushed up against menu bar */
+	/*background-image: url(../images/whiteSpacer.gif);
+	background-repeat: repeat-x;*/
+}
+
+#sidebar1 {
+	float: left; /* since this element is floated, a width must be given */
+	width: 178px; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 15px 0px 15px 0px;
+}
+
+#mainContent {
+	width: 520px;
+	margin-left: 16px;
+	float:left;
+}
+
+#sidebar2 {
+	float: right; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 15px 0px 15px 10px;
+}
+
+.center	{
+	margin-left:auto;
+	margin-right:auto;
+	width:75%;
+	}
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	/*margin-right: 8px;*/
+	
+	
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+/* Styles for content boxes */
+#mainBox1	{
+	margin: 15px 0 0 0 ;/* top margin set to same value as top padding in left and right columns*/
+	}
+#findABook	{ /*special box for Find a Book on index page only*/
+	margin: 2px 0 0 0;
+	background-color: #3C3292;
+	color: #FFFFFF;	/*background-image: url(../images/findABookBkgnd.gif);
+	background-repeat: no-repeat;*/
+	height: 118px;
+} 
+/*#findTextBox{
+	margin: 20px 0 0 150px;
+	}*/
+.leftBoxStyles {
+	width: 156px;
+	background-color: #FFFFFF;
+	border: solid #A7A9AC 1px;
+	padding: 5px 5px 5px 10px;
+}
+.mainBoxStyles {
+	width: 504px;
+	background-color: #FFFFFF;
+	border: solid #A7A9AC 1px;
+	padding: 5px 5px 5px 10px;
+}
+.rightBoxStyles {
+	width: 270px;
+	background-color: #FFFFFF;
+	border: solid #A7A9AC 1px;
+	padding: 5px 5px 5px 10px;
+}
+* html .rightBoxStyles {/* hack so ie6 displays 3 columns*/
+	width: 260px;
+	}
+	
+.boxSpacer {
+	height: 15px;
+	width: auto;
+}
+
+input {
+	border: none;
+	
+	}
+
+#findTextBox input.searchBox	{/* zeros margins for the Find A Book search box */
+	margin: 0;
+	}
+
+.searchBox	{
+	text-align: left;
+	padding: 0 0 0 20px;
+	height: 16px;
+	margin: 5px 0 0 25px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	color: #000000;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 80%;
+	background-image: url(../images/magGlassImg.png);/* Old image = magGlassImgGreen.gif */
+	background-repeat: no-repeat;
+	background-position: left;
+		
+	}
+	
+#flickr	{
+	padding: 12px 0 0 50px ;
+	text-align: center;
+	vertical-align: middle;
+	}
+	
+#moreTools	{
+	margin: 0 0 0 10px;
+	}
+
+#moreTools img	{
+	
+	height: 45px;
+	}
+#moreTools div	{
+	
+	height: 100px;
+	text-align: center;
+	padding: 20px 5px;
+	}
+
+#musPass {
+	padding: 8px 0 0 0 ;
+	text-align: center;
+	}
+
+	
+#footer { 
+	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	/*background:#fff;*/
+} 
+#footer p {
+	text-align: center;
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}

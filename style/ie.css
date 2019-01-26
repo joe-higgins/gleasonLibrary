@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Styles for Internet Explorer */
+
+/*<!--[if IE]>*/
+/*<style type="text/css"> */
+/* place css fixes for all versions of IE in this conditional comment */
+
+.thrColFixHdr #sidebar2, .thrColFixHdr #sidebar1 { padding-top: 30px; }
+.thrColFixHdr #mainContent { zoom: 1; }
+#searchCat {
+			background-color: #000000;/* Old background color = #43562E*/
+			border-top: #ffffff solid 1.2px;	
+			}
+    
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+/*</style>*/
+/*<![endif]-->*/
